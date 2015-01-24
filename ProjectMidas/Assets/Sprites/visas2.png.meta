@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 3cbe6c1103948884c9dee62cefb0f383
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: visas2_0
+    21300002: visas2_1
+    21300004: visas2_2
+    21300006: visas2_3
+    21300008: visas2_4
+    21300010: visas2_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: visas2_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 850
+        width: 483
+        height: 515
+      alignment: 9
+      pivot: {x: .505104601, y: .093075648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: visas2_1
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1157
+        width: 336
+        height: 182
+      alignment: 9
+      pivot: {x: .144369215, y: .590798855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: visas2_2
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 920
+        width: 487
+        height: 546
+      alignment: 9
+      pivot: {x: .513885677, y: .0667581558}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: visas2_3
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 557
+        width: 286
+        height: 251
+      alignment: 9
+      pivot: {x: .874103248, y: .128480956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: visas2_4
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 431
+        width: 335
+        height: 182
+      alignment: 9
+      pivot: {x: .842788398, y: .589105964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: visas2_5
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 179
+        width: 281
+        height: 251
+      alignment: 9
+      pivot: {x: .109841235, y: .118427835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
