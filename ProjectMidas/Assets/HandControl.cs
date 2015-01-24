@@ -5,7 +5,6 @@ public class HandControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//Screen.showCursor = false;
 	}
 	
 	// Update is called once per frame
@@ -39,5 +38,9 @@ public class HandControl : MonoBehaviour {
 	void TurnToGold()
 	{
 		gameObject.renderer.material.color = Color.yellow;
+		gameObject.GetComponent<HandControl> ().enabled = false;
+		gameObject.rigidbody.useGravity = true;
+		rigidbody.velocity = new Vector3 (0, rigidbody.velocity.y, 0);
+		// Game Over Screen
 		}
 }
