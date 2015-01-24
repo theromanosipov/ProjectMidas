@@ -5,7 +5,7 @@ public class HandControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Screen.showCursor = false;
+		//Screen.showCursor = false;
 	}
 	
 	// Update is called once per frame
@@ -18,13 +18,13 @@ public class HandControl : MonoBehaviour {
 						if (transform.position.z > 5) {
 								rigidbody.velocity = new Vector3 (0, 0, 0); 
 						} else
-								rigidbody.velocity = new Vector3 (0, 0, 5f);
-				} else if (transform.position.z > -6)
-						rigidbody.velocity = new Vector3 (0, 0, -10f);
+								rigidbody.velocity = new Vector3 (0, 0, 10f);
+				} else if (transform.position.z > -2)
+						rigidbody.velocity = new Vector3 (0, 0, -20f);
 				else 
 						rigidbody.velocity = new Vector3 (0, 0, 0);
-		if (Input.GetMouseButton (1) && transform.childCount != 0) {
-						transform.GetChild (0).parent = null;
+		if (Input.GetMouseButton (1) && transform.childCount != 1) {
+						transform.GetChild (1).parent = null;
 				}
 		position.z = transform.position.z;
 		transform.position = position;
@@ -32,7 +32,12 @@ public class HandControl : MonoBehaviour {
 
 	public void PickObject(GameObject other)
 	{
-		if (transform.childCount == 0)
-						other.transform.parent = transform;
+		if (transform.childCount == 1)
+						other.transform.parent = gameObject.transform;
 	}
+
+	void TurnToGold()
+	{
+		gameObject.renderer.material.color = Color.yellow;
+		}
 }
