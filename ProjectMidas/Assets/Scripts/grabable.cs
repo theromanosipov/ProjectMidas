@@ -3,7 +3,7 @@ using System.Collections;
 
 public class grabable : MonoBehaviour {
 
-	bool isGold = false;
+	public bool isGold = false;
 
 	void OnTriggerEnter (Collider other) {
         if (other.tag == "Player" && !isGold)

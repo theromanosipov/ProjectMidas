@@ -18,6 +18,7 @@ public class MidasAnimation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Debug.Log(mood);
+        AddMood(Time.deltaTime * -1);
 
         if (Random.value < 0.01)
         {
@@ -25,6 +26,7 @@ public class MidasAnimation : MonoBehaviour {
             animator.SetBool("mouthClosed", mouthClosed);
         }
 
+        
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("IdleTree") && aTime < Time.time) {
 		    aTime = Time.time + 1f;
 
@@ -39,7 +41,7 @@ public class MidasAnimation : MonoBehaviour {
                 else
                     animator.SetTrigger("side" + (Mathf.RoundToInt(Random.value * 1) + 1));
             }
-            else if (mood > 80 && random) 
+            else if (mood > 80 && random)
             {
                 animator.SetTrigger("happy" + (Mathf.RoundToInt(Random.value * 3) + 1));
             }
@@ -51,7 +53,11 @@ public class MidasAnimation : MonoBehaviour {
                 //animator.SetTrigger("hide");
                 //hTime = Time.time + 3 + Random.value * 3;                
             }
-	
+        else if (mood > 90&&animator.GetBool("hide"))
+        {
+            animator.SetBool("hide", false);
+            animator.SetTrigger("happy" + (Mathf.RoundToInt(Random.value * 3) + 1));
+        }
 		//case 1 - 4:
 		//	animator.Play("IdleTypes", );
 		//	aTime=Time.time+1f;

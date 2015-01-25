@@ -4,13 +4,18 @@ using System.Collections;
 public class Rattle : MonoBehaviour {
 
     private Vector3 oldPosition;
+    private grabable touchy;
 
-	void Start () {
-	
-	}
+    void Start()
+    {
+        touchy = gameObject.GetComponent<grabable>();
+    }
 	
 	void Update () {
-        MidasAnimation.AddMood(Vector3.Distance(oldPosition, transform.position) * 0.5f);
-        oldPosition = transform.position;
+        if (!touchy.isGold)
+        {
+            MidasAnimation.AddMood(Vector3.Distance(oldPosition, transform.position) * 0.5f);
+            oldPosition = transform.position;
+        }
 	}
 }

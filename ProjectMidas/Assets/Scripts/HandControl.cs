@@ -12,7 +12,7 @@ public class HandControl : MonoBehaviour {
 	void Update () {
 		Vector3 position =Input.mousePosition;
 		position.y = (2*position.y/Screen.height - 1) * 6 *(1+transform.position.z/11);
-		position.x = (2*position.x / Screen.width - 1) * 8 *(1+transform.position.z/11);
+		position.x = (2*position.x / Screen.width - 1) * 12 *(1+transform.position.z/11);
 		//Debug.Log (Input.mousePosition+" "+position);
 		if (Input.GetMouseButton (0)) {
 			if (transform.position.z > 5) {
