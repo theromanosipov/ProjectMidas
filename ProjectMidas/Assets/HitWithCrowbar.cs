@@ -8,7 +8,7 @@ public class HitWithCrowbar : MonoBehaviour {
         if (other.tag == "Crowbar")
         {
             transform.parent.parent.GetComponent<Animator>().SetBool("hide", false);
-            transform.parent.parent.GetComponent<Animator>().SetTrigger("rage1"); //+ (Mathf.RoundToInt(Random.value * 3) + 1));
+            transform.parent.parent.GetComponent<Animator>().SetTrigger("rage" + Random.Range(1, 4));
             MidasAnimation.AddMood(-50);
         }
     }

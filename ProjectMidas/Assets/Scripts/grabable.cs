@@ -5,11 +5,17 @@ public class grabable : MonoBehaviour {
 
 	public bool isGold = false;
 
-	void OnTriggerEnter (Collider other) {
+	void Update()
+    {
+        if (transform.parent != null)
+            transform.position = transform.parent.position+new Vector3(0,0,1);
+
+    }
+    
+    void OnTriggerEnter (Collider other) {
         if (other.tag == "Player" && !isGold)
         {
             other.GetComponent<HandControl>().PickObject(gameObject);
-            rigidbody.useGravity = false;
         }
 	}
 

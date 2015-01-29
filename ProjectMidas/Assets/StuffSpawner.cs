@@ -30,7 +30,7 @@ public class StuffSpawner : MonoBehaviour {
                 currentObject = crowbar;
             else
                 currentObject = rattle;
-            Instantiate(currentObject, new Vector3((Random.value - 1) * 12, 10, -0.33f), Quaternion.identity);
+            Instantiate(currentObject, new Vector3((Random.value - 0.5f) * 24, 10, -0.33f), Quaternion.identity);
             nextTime = Time.time + time;
         }
 

@@ -37,17 +37,17 @@ public class MidasAnimation : MonoBehaviour {
                 if (random2 < 0.1)
                     animator.SetBool("hide", true);
                 else if (random2 < 0.6f)
-                    animator.SetTrigger("rage1"); //+ (Mathf.RoundToInt(Random.value * 3) + 1));
+                    animator.SetTrigger("rage" + Random.Range(1, 4));
                 else
-                    animator.SetTrigger("side" + (Mathf.RoundToInt(Random.value * 1) + 1));
+                    animator.SetTrigger("side" + Random.Range(1, 3));
             }
             else if (mood > 80 && random)
             {
-                animator.SetTrigger("happy" + (Mathf.RoundToInt(Random.value * 3) + 1));
+                animator.SetTrigger("happy" + Random.Range(1, 5));
             }
             else if (random) 
             {
-                animator.SetTrigger("side" + (Mathf.RoundToInt(Random.value * 1) + 1));
+                animator.SetTrigger("side" + Random.Range(1, 3));
             }
 
                 //animator.SetTrigger("hide");
@@ -56,7 +56,7 @@ public class MidasAnimation : MonoBehaviour {
         else if (mood > 90&&animator.GetBool("hide"))
         {
             animator.SetBool("hide", false);
-            animator.SetTrigger("happy" + (Mathf.RoundToInt(Random.value * 3) + 1));
+            animator.SetTrigger("happy" + Random.Range(1, 5));
         }
 		//case 1 - 4:
 		//	animator.Play("IdleTypes", );
